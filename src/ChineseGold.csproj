@@ -1,0 +1,28 @@
+<Project Sdk="Bannerlord.BUTRModule.Sdk/1.1.0.124">
+
+  <PropertyGroup>
+    <Version>0.1.0</Version>
+    <TargetFramework>net472</TargetFramework>
+    <Platforms>x64</Platforms>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+
+    <BuildForWindows>true</BuildForWindows>
+    <BuildForWindowsStore>false</BuildForWindowsStore>
+
+    <ModuleId>ChineseGold</ModuleId>
+    <ModuleName>ChineseGold</ModuleName>
+    <ModuleUrl>https://github.com/Luguode-Rogue/ChineseGold</ModuleUrl>
+    <GameFolder Condition="'$(BANNERLORD_GAME_DIR)' != ''">$(BANNERLORD_GAME_DIR)</GameFolder>
+
+    <ReferenceHarmony>true</ReferenceHarmony>
+    <HarmonyVersion>2.2.2</HarmonyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" PrivateAssets="all" IncludeAssets="compile" />
+    <PackageReference Include="BUTR.Harmony.Analyzer" Version="1.0.1.50" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+  </ItemGroup>
+
+</Project>
