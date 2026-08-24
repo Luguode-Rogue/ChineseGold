@@ -1,4 +1,5 @@
 using System;
+using HarmonyLib;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
@@ -20,6 +21,7 @@ namespace ChineseGold
             try
             {
                 GoldDisplayPatches.Apply();
+                CampaignHudGoldPatch.Apply(new Harmony("Luguode.ChineseGold.Hud"));
                 _initialized = true;
             }
             catch (Exception ex)
